@@ -1,9 +1,12 @@
-export const ContactList = ({ contacts }) => {
+export const ContactList = ({ contacts, filter, onDelete }) => {
   return (
     <ul>
-      {contacts.map(contact => (
-        <li key={contact.id}>
-          {contact.name}: {contact.number}
+      {contacts.filter(({name}) => {
+        return name.toLowerCase().includes(filter.toLowerCase())
+      }).map(({id, name, number}) => (
+        <li key={id}>
+          {name}: {number}
+          <button id={id} onClick={onDelete}>Delete</button>
         </li>
       ))}
     </ul>
