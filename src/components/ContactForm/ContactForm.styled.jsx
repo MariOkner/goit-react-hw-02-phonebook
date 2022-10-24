@@ -7,9 +7,12 @@ import {
 
 export const Form = styled(FormikForm)`
   display: inline-flex;
+
   flex-direction: column;
   gap: 16px;
+
   padding: 20px 200px 20px 20px;
+
   border: 1px solid #00008b;
   border-radius: 5px;
 `;
@@ -22,7 +25,10 @@ export const FormLabel = styled.label`
 
 export const Field = styled(FormField)`
   outline: none;
+
   border: 1px solid #000000;
+  border-radius: 3px;
+
   &:hover,
   &:focus {
     border: 1px solid #7b68ee;
@@ -37,10 +43,11 @@ export const ErrorMessage = styled(FormErrorMessage)`
 export const Button = styled.button`
   width: 120px;
   padding: 5px;
+
   background-color: #00008b;
+  color: #ffffff;
   border-radius: 5px;
   border: transparent;
-  color: #ffffff;
 
   &:hover {
     background-color: #7b68ee;
