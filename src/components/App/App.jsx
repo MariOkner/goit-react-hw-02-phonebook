@@ -54,10 +54,10 @@ export class App extends Component {
     });
   };
 
-  handleContactDelete = event => {
+  handleContactDelete = id => {
     this.setState(({ contacts }) => ({
       contacts: contacts.filter(contact => {
-        return contact.id !== event.target.id;
+        return contact.id !== id;
       }),
     }));
   };
